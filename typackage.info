@@ -1,0 +1,12 @@
+{
+	"dependencies" : [ 
+		"tycore:build:master",
+		"tycore:core:master",
+		"tycore:freetype:master",
+		"tycore:image:master"
+	],
+	"workspace_mapping" : "@{ty_hub_lib}"
+}
+
+
+
