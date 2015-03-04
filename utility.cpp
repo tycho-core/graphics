@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////////////////////////
+// Tycho Game Library
+// Copyright (C) 2008 Martin Slater
+// Created : Wednesday, 16 April 2008 11:57:43 PM
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// INCLUDES
+//////////////////////////////////////////////////////////////////////////////
+#include "graphics/utility.h"
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CLASS
+//////////////////////////////////////////////////////////////////////////////
+namespace tycho
+{
+namespace graphics
+{
+	
+	TYCHO_GRAPHICS_ABI int get_num_primitives(int num_verts, primitive_type t)
+	{
+		switch(t)
+		{
+			case primitive_type_tri_list   : return num_verts / 3;
+ 			case primitive_type_tri_strip  : TYCHO_ASSERT(num_verts > 2); return num_verts - 2;
+ 			case primitive_type_line_list  : return num_verts / 2;
+ 			case primitive_type_line_strip : TYCHO_ASSERT(num_verts > 1); return num_verts - 1;
+                
+            default : TYCHO_NOT_IMPLEMENTED; break;
+		}
+		return 0;
+	}
+
+} // end namespace
+} // end namespace

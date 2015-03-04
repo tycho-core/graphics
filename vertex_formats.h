@@ -1,0 +1,39 @@
+//////////////////////////////////////////////////////////////////////////////
+// Tycho Game Library
+// Copyright (C) 2008 Martin Slater
+// Created : Tuesday, 20 May 2008 1:38:41 AM
+//////////////////////////////////////////////////////////////////////////////
+#if _MSC_VER > 1000
+#pragma once
+#endif  // _MSC_VER
+
+#ifndef __VERTEX_FORMATS_H_9C713411_FEF1_4E65_AFDC_1F7C62090304_
+#define __VERTEX_FORMATS_H_9C713411_FEF1_4E65_AFDC_1F7C62090304_
+
+//////////////////////////////////////////////////////////////////////////////
+// INCLUDES
+//////////////////////////////////////////////////////////////////////////////
+#include "graphics/graphics_abi.h"
+#include "graphics/vertex_format.h"
+
+//////////////////////////////////////////////////////////////////////////////
+// CLASS
+//////////////////////////////////////////////////////////////////////////////
+
+// Common vertex format definitions for ease of use
+
+namespace tycho
+{
+namespace graphics
+{
+
+	struct TYCHO_GRAPHICS_ABI vertex_formats
+	{
+		static vertex_format pos3f32_nml3f32_uv2f32;
+		static vertex_format pos3f32_nml3f32;
+	};
+
+} // end namespace
+} // end namespace
+
+#endif // __VERTEX_FORMATS_H_9C713411_FEF1_4E65_AFDC_1F7C62090304_
