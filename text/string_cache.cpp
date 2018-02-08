@@ -181,7 +181,7 @@ namespace text
 			for(size_t j = 0; j < tex.m_batches.size(); ++j)
 			{		
 				batch* b = tex.m_batches[j];
-				int num_glyphs = b->glyphs.size();
+				int num_glyphs = static_cast<int>(b->glyphs.size());
 				int num_verts = num_glyphs * 4;
 				int num_indices = num_glyphs * 6;
 				

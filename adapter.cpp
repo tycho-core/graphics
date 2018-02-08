@@ -26,7 +26,7 @@ namespace graphics
 	
 	int adapter::get_num_formats() const
 	{
-		return m_formats.size();
+		return static_cast<int>(m_formats.size());
 	}
 	
 	const adapter::format& adapter::get_format(int i) const
